@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_load_pickup"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@color/purple_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_load_pickup_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="3/15/21" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_load_direction_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/purple_700"
+            android:src="@drawable/ic_directions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_load_pickup" />
+
+        <TextView
+            android:id="@+id/tv_load_origin_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_load_direction_image"
+            app:layout_constraintEnd_toStartOf="@id/tv_load_label_city"
+            app:layout_constraintStart_toEndOf="@id/iv_load_direction_image"
+            app:layout_constraintTop_toTopOf="@id/iv_load_direction_image"
+            tools:text="Pittsburgh, Pa. 15145" />
+
+        <TextView
+            android:id="@+id/tv_load_label_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direction_label"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="@id/iv_load_direction_image"
+            app:layout_constraintEnd_toStartOf="@id/tv_load_destination_city"
+            app:layout_constraintStart_toEndOf="@id/tv_load_origin_city"
+            app:layout_constraintTop_toTopOf="@id/iv_load_direction_image" />
+
+        <TextView
+            android:id="@+id/tv_load_destination_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_load_direction_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_load_label_city"
+            app:layout_constraintTop_toTopOf="@id/iv_load_direction_image"
+            tools:text="Detroit, MI. 99999" />
+
+        <TextView
+            android:id="@+id/tv_load_profit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_load_origin_city"
+            tools:text="$1,110.00" />
+
+        <TextView
+            android:id="@+id/tv_load_per_mile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@id/tv_load_profit"
+            app:layout_constraintTop_toBottomOf="@id/tv_load_profit"
+            tools:text="$1.42/mi." />
+
+        <TextView
+            android:id="@+id/tv_load_multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="x"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/tv_load_per_mile"
+            app:layout_constraintTop_toBottomOf="@id/tv_load_profit" />
+
+        <TextView
+            android:id="@+id/tv_load_miles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@id/tv_load_multiply"
+            app:layout_constraintTop_toBottomOf="@id/tv_load_profit"
+            tools:text="776 mi." />
+
+        <TextView
+            android:id="@+id/tv_load_trailer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/iv_load_direction_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_load_miles"
+            tools:text="Flat or Step" />
+
+        <TextView
+            android:id="@+id/tv_load_commodity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_load_trailer"
+            app:layout_constraintEnd_toStartOf="@id/tv_load_weight"
+            app:layout_constraintStart_toEndOf="@id/tv_load_trailer"
+            app:layout_constraintTop_toTopOf="@id/tv_load_trailer"
+            tools:text="Chemicals" />
+
+        <TextView
+            android:id="@+id/tv_load_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_load_trailer"
+            tools:text="24006 lbs." />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@color/design_default_color_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_load_drop_off_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="3/15/21" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

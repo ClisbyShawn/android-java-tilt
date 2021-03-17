@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">JavaTilt</string>
+    <string name="origin_location_hint">Origin Location</string>
+    <string name="destination_location_hint">Destination Location</string>
+    <string name="date_to_prompt">to</string>
+    <string name="max_weight_hint">Max Weight</string>
+    <string name="search_button_text">Search</string>
+    <string name="reset_button_text">Reset</string>
+    <string name="date_prompt">--</string>
+    <string name="to_date_hint">To Date</string>
+    <string name="from_date_hint">From Date</string>
+    <string name="radius_prompt">Radius</string>
+    <string name="filter_loads_title">Filter Loads</string>
+    <string name="filter_list_icon_description">Filter List Icon</string>
+    <string name="trailer_act_hint">Trailer</string>
+    <string name="commodity_act_hint">Commodity</string>
+    <string name="chip_date">Date</string>
+    <string name="price_chip">Price</string>
+    <string name="weight_chip">Weight</string>
+    <string name="miles_chip">Miles</string>
+    <string name="direction_label">to</string>
+</resources>

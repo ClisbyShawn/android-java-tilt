@@ -1,0 +1,98 @@
+{
+  "data": {
+    "commodities": [
+      {
+        "value": "BCM",
+        "name": "BUILD / CONS MAT"
+      },
+      {
+        "value": "CHEM",
+        "name": "CHEMICALS"
+      },
+      {
+        "value": "CON",
+        "name": "CONTAINERS"
+      },
+      {
+        "value": "EQUIP",
+        "name": "EQUIPMENT"
+      },
+      {
+        "value": "FOOD",
+        "name": "FOOD / FOOD PRODUCTS"
+      },
+      {
+        "value": "GOVT",
+        "name": "MILITARY FREIGHT"
+      },
+      {
+        "value": "HAZ",
+        "name": "HAZ MATERIALS"
+      },
+      {
+        "value": "LUM",
+        "name": "LUMBER/WOOD PROD"
+      },
+      {
+        "value": "MACH",
+        "name": "MACHINERY"
+      },
+      {
+        "value": "MIN",
+        "name": "MINERALS"
+      },
+      {
+        "value": "MISC",
+        "name": "MISCELLANEOUS"
+      },
+      {
+        "value": "MOTS",
+        "name": "METALS O/T STEEL"
+      },
+      {
+        "value": "PART",
+        "name": "PARTS"
+      },
+      {
+        "value": "POLE",
+        "name": "POLES"
+      },
+      {
+        "value": "POT",
+        "name": "PLANTS OR TREES"
+      },
+      {
+        "value": "STEEL",
+        "name": "STEEL"
+      },
+      {
+        "value": "STF",
+        "name": "STRUCTURAL/FAB"
+      },
+      {
+        "value": "TUB",
+        "name": "TUBING"
+      },
+      {
+        "value": "UNKNOWN",
+        "name": "UNKNOWN"
+      },
+      {
+        "value": "VAN",
+        "name": "VAN FREIGHT"
+      },
+      {
+        "value": "VEH",
+        "name": "VEHICLES"
+      },
+      {
+        "value": "Wind",
+        "name": "WIND ENERGY"
+      }
+    ]
+  },
+  "messages": [
+    "Commodities"
+  ],
+  "error": false
+}

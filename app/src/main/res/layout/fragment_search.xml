@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_home_origin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/origin_location_hint"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_location">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_home_origin_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/slider_home_origin_radius"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:stepSize="10.0"
+        android:valueFrom="0.0"
+        android:valueTo="150.0"
+        app:layout_constraintEnd_toEndOf="@id/til_home_origin"
+        app:layout_constraintStart_toEndOf="@id/tv_home_origin_radius"
+        app:layout_constraintTop_toBottomOf="@id/til_home_origin" />
+
+    <TextView
+        android:id="@+id/tv_home_origin_radius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radius_prompt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/slider_home_origin_radius"
+        app:layout_constraintStart_toStartOf="@id/til_home_origin"
+        app:layout_constraintTop_toBottomOf="@id/til_home_origin" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_home_destination"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/destination_location_hint"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/til_home_origin"
+        app:layout_constraintStart_toStartOf="@id/til_home_origin"
+        app:layout_constraintTop_toBottomOf="@id/slider_home_origin_radius"
+        app:startIconDrawable="@drawable/ic_location">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_home_destination_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/slider_home_destination_radius"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:stepSize="10.0"
+        android:valueFrom="0.0"
+        android:valueTo="150.0"
+        app:layout_constraintEnd_toEndOf="@id/til_home_destination"
+        app:layout_constraintStart_toEndOf="@id/tv_home_destination_radius"
+        app:layout_constraintTop_toBottomOf="@id/til_home_destination" />
+
+    <TextView
+        android:id="@+id/tv_home_destination_radius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radius_prompt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/slider_home_destination_radius"
+        app:layout_constraintStart_toStartOf="@id/til_home_origin"
+        app:layout_constraintTop_toTopOf="@id/slider_home_destination_radius" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_home_from_date"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:hint="@string/from_date_hint"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintEnd_toStartOf="@id/til_home_to_date"
+        app:layout_constraintStart_toStartOf="@id/til_home_origin"
+        app:layout_constraintTop_toBottomOf="@id/slider_home_destination_radius"
+        app:startIconDrawable="@drawable/ic_date_range">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_home_from_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_home_to_date"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/to_date_hint"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/til_home_destination"
+        app:layout_constraintStart_toEndOf="@id/til_home_from_date"
+        app:layout_constraintTop_toBottomOf="@id/slider_home_destination_radius"
+        app:startIconDrawable="@drawable/ic_date_range">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_home_to_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_home_max_weight"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="@string/max_weight_hint"
+        app:layout_constraintEnd_toEndOf="@id/til_home_origin"
+        app:layout_constraintStart_toStartOf="@id/til_home_origin"
+        app:layout_constraintTop_toBottomOf="@id/til_home_from_date"
+        app:suffixText="lbs.">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_home_max_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_home_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:text="@string/search_button_text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/til_home_origin"
+        app:layout_constraintStart_toStartOf="@id/til_home_origin"
+        app:layout_constraintTop_toBottomOf="@id/til_home_max_weight" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_home_reset"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/reset_button_text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/til_home_origin"
+        app:layout_constraintStart_toStartOf="@id/til_home_origin"
+        app:layout_constraintTop_toBottomOf="@id/btn_home_search" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_home_cancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="@id/til_home_origin"
+        app:layout_constraintStart_toStartOf="@id/til_home_origin"
+        app:layout_constraintTop_toBottomOf="@id/btn_home_reset" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
